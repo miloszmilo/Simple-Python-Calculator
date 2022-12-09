@@ -87,17 +87,18 @@ if __name__ == "__main__":
             try:
                 choice = str.lower(input(
                     "What would you like to do?\nAddition(+)\nSubtract(-)\nMultiply(*)\nDivide(/)\nPower(pow)\nRoot(root)\nSinus(sin)\nCosinus(cos)\nTangent(tan)\nPick new numbers(p)\nExit(x)\n\n"))
-            except choice == NULL or choice == "\n" or choice == " ":
+            except TypeError:
                 print("That's not a valid option.")
                 continue
 
-            if (choice == 'x'):
+            if choice == 'x':
                 exit
 
-            if (choice == 'p'):
+            if choice == 'p':
                 clearConsole()
                 break
-            if (choice != "sin" or choice != "tan"):
+
+            if choice != "sin" or choice != "tan":
                 print(str(x) + " " + choice + " " + str(y) + " = ")
             print(str(x) + " " + choice + " = ")
 
